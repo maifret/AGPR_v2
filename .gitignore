@@ -1,0 +1,15 @@
+# Configuraciones privadas
+.env
+.env.*
+!.env.example
+
+# Dependencias
+/vendor/
+/node_modules/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Configuraciones locales
+.vscode/
