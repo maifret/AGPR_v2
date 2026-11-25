@@ -1,0 +1,921 @@
+
+/* AGPR | Pulido visual de navegación, contacto, footer y acceso */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.seccion-contenedor,
+.footer-agpr-grid {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+
+.nosotros-premium,
+.contacto-premium {
+  padding: 100px 0;
+  text-align: left;
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.nosotros-imagen {
+  position: relative;
+  min-height: 390px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #343434;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  filter: brightness(.7);
+}
+
+.nosotros-imagen span {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  font-family: Rajdhani, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.nosotros-texto h2,
+.contacto-titulo h2 {
+  font-family: Rajdhani, sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.1;
+  margin: 12px 0 22px;
+  color: #fff;
+}
+
+.nosotros-texto h2 em {
+  font-style: normal;
+  color: #e42b32;
+}
+
+.nosotros-texto p,
+.contacto-titulo p {
+  max-width: 620px;
+  color: #c3c3c3;
+  line-height: 1.85;
+  margin-bottom: 17px;
+}
+
+.nosotros-texto .btn-principal {
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.contacto-premium {
+  background: linear-gradient(180deg, #101010, #191919);
+}
+
+.contacto-titulo {
+  margin-bottom: 38px;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.contacto-info {
+  display: grid;
+  gap: 16px;
+}
+
+.contacto-dato {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  background: #222;
+  border: 1px solid #363636;
+  border-radius: 14px;
+  padding: 21px;
+}
+
+.contacto-dato > span {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  background: #3b181a;
+  color: #ff5a61;
+  border-radius: 12px;
+  font-size: 25px;
+}
+
+.contacto-dato strong {
+  color: #fff;
+}
+
+.contacto-dato p {
+  color: #aaa;
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.contacto-aclaracion {
+  color: #929292;
+  font-size: 12px;
+}
+
+.contacto-form {
+  padding: 30px;
+  border: 1px solid #373737;
+  border-radius: 18px;
+  background: #222;
+  display: grid;
+  gap: 18px;
+}
+
+.contacto-form h3 {
+  font-family: Rajdhani, sans-serif;
+  font-size: 29px;
+  color: white;
+  margin: 0;
+}
+
+.contacto-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.contacto-form label,
+.auth-card label {
+  display: grid;
+  gap: 8px;
+  color: #e7e7e7;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contacto-form input,
+.contacto-form textarea,
+.auth-card input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  border-radius: 9px;
+  border: 1px solid #494949;
+  background: #151515;
+  color: white;
+  font: inherit;
+  outline: none;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus,
+.auth-card input:focus {
+  border-color: #d71920;
+  box-shadow: 0 0 0 2px #d7192033;
+}
+
+.contacto-form textarea {
+  resize: vertical;
+}
+
+.contacto-form .btn-principal {
+  border: 0;
+  cursor: pointer;
+}
+
+.contacto-estado {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+.contacto-estado.exito {
+  color: #9ce6b5;
+}
+
+/* FOOTER */
+
+.footer-agpr {
+  background: #0a0a0a;
+  color: #bbb;
+  padding: 70px 0 0;
+  border-top: 1px solid #343434;
+}
+
+.footer-agpr-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 36px;
+}
+
+.footer-agpr-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-agpr-grid h3 {
+  font-family: Rajdhani, sans-serif;
+  color: #fff;
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.footer-agpr-grid a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-agpr-grid a:hover {
+  color: #ff424a;
+}
+
+.footer-agpr-grid p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.footer-agpr-grid small {
+  font-size: 11px;
+  color: #777;
+}
+
+.footer-marca img {
+  width: 145px;
+  max-height: 75px;
+  object-fit: contain;
+  object-position: left;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-redes span {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #555;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  cursor: default;
+}
+
+.footer-agpr-base {
+  border-top: 1px solid #282828;
+  margin-top: 55px;
+  padding: 22px max(24px, calc((100vw - 1180px)/2));
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* CUENTA E INICIO DE SESIÓN */
+
+.cuenta-header-link {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  border: 1px solid #555;
+  border-radius: 9px;
+  padding: 10px 15px;
+}
+
+.cuenta-header-link:hover {
+  border-color: #d71920;
+}
+
+.auth-page {
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+  padding: 70px 20px;
+  background:
+    radial-gradient(ellipse at 50% 0, #3a1014 0, transparent 52%),
+    #101010;
+}
+
+.auth-card {
+  width: min(480px, 100%);
+  background: #1c1c1c;
+  border: 1px solid #414141;
+  border-radius: 20px;
+  padding: clamp(25px, 5vw, 42px);
+  box-shadow: 0 30px 75px #0008;
+}
+
+.auth-logo {
+  color: #f3484e;
+  font-family: Rajdhani, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.auth-card h1 {
+  font-family: Rajdhani, sans-serif;
+  color: white;
+  font-size: 43px;
+  margin: 8px 0;
+}
+
+.auth-card > p {
+  color: #c8c8c8;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.auth-card form {
+  display: grid;
+  gap: 19px;
+}
+
+.auth-card form .btn-principal {
+  border: 0;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.auth-card a {
+  color: #ff5d63;
+}
+
+.auth-card form + p {
+  margin: 25px 0 12px;
+  text-align: center;
+}
+
+.auth-card small {
+  display: block;
+  color: #929292;
+  line-height: 1.6;
+}
+
+.auth-error {
+  padding: 12px;
+  background: #461d20;
+  color: #ffc4c7;
+  border-radius: 9px;
+}
+
+/* ISOTIPO EN SOBRE NOSOTROS */
+
+.nosotros-isotipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at center,
+      #292929 0%,
+      #151515 60%,
+      #101010 100%
+    );
+  padding: 36px 36px 65px;
+}
+
+.nosotros-isotipo img {
+  position: relative;
+  inset: auto;
+  width: min(78%, 330px);
+  height: auto;
+  min-height: 0;
+  max-height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, .4));
+}
+
+.nosotros-isotipo span {
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  text-align: center;
+}
+
+/* NUEVO FONDO GENERAL DE AGPR */
+
+body {
+  background-color: #080808;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, .18),
+      rgba(0, 0, 0, .28)
+    ),
+    url("../img/fondo-agpr.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* PORTADA: FONDO MÁS VISIBLE */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: none;
+  background-color: #0a0a0a;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("../img/fondo-agpr.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(1.7) saturate(1.2);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, .42) 0%,
+    rgba(0, 0, 0, .22) 38%,
+    rgba(0, 0, 0, 0) 72%
+  );
+  pointer-events: none;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+}
+
+/* SECCIONES CON FONDO TRANSLÚCIDO */
+
+.categorias,
+.beneficios,
+.nosotros-premium {
+  background: rgba(9, 9, 9, .58);
+}
+
+.contacto-premium {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 12, 12, .84),
+    rgba(22, 22, 22, .9)
+  );
+}
+
+.footer-agpr {
+  background: rgba(6, 6, 6, .96);
+}
+
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 850px) {
+  .nosotros-grid,
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-agpr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nosotros-premium,
+  .contacto-premium {
+    padding: 70px 0;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero::before {
+    background-position: 60% center;
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, .55),
+      rgba(0, 0, 0, .18)
+    );
+  }
+}
+
+@media (max-width: 550px) {
+  .seccion-contenedor,
+  .footer-agpr-grid {
+    width: calc(100% - 32px);
+  }
+
+  .contacto-campos {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-form {
+    padding: 20px;
+  }
+
+  .footer-agpr-grid {
+    gap: 30px;
+  }
+
+  .footer-agpr-base {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-imagen,
+  .nosotros-imagen img {
+    min-height: 270px;
+  }
+
+  .nosotros-isotipo {
+    padding: 30px 25px 65px;
+  }
+
+  .nosotros-isotipo img {
+    min-height: 0;
+    width: min(75%, 240px);
+  }
+}
+
+/* CONSERVAMOS EL FONDO QUE YA FUNCIONA */
+
+.hero {
+  background: url("../img/fondo-agpr.png") center / cover no-repeat !important;
+}
+
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+
+/* ==========================================
+   MEJORA DE LEGIBILIDAD - AGPR
+   Observación de la maestra
+   ========================================== */
+
+/* Texto base */
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Navegación */
+
+.menu a {
+  font-size: 18px;
+}
+
+.acciones-header input {
+  font-size: 16px;
+}
+
+.cuenta-header-link {
+  font-size: 17px;
+}
+
+/* Etiquetas pequeñas */
+
+.hero-etiqueta,
+.seccion-etiqueta {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+/* Títulos principales */
+
+.categorias h2,
+.catalogo h2,
+.nosotros h2,
+.contacto h2 {
+  font-size: clamp(40px, 4vw, 50px);
+}
+
+/* Tarjetas de categorías */
+
+.categoria h3 {
+  font-size: 31px;
+}
+
+.categoria p {
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.categoria a {
+  font-size: 19px;
+}
+
+/* Beneficios */
+
+.beneficios h3 {
+  font-size: 26px;
+}
+
+.beneficios p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Catálogo */
+
+.catalogo-portada p,
+.catalogo-encabezado p {
+  font-size: 18px;
+}
+
+.volver-inicio {
+  font-size: 16px;
+}
+
+.filtro {
+  font-size: 19px;
+}
+
+.resultados-contador,
+.catalogo-refinado .resultados-contador {
+  font-size: 16px;
+}
+
+/* Catálogo centrado:
+   mayor especificidad porque catalogo.php
+   tiene algunos estilos internos */
+
+.catalogo.catalogo-refinado
+.catalogo-refinado-titulo p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.catalogo.catalogo-refinado .filtro {
+  font-size: 19px;
+}
+
+.catalogo.catalogo-refinado .catalogo-migas {
+  font-size: 16px;
+}
+
+.catalogo.catalogo-refinado .resultados-contador {
+  font-size: 16px;
+}
+
+.catalogo.catalogo-refinado .catalogo-limpiar {
+  font-size: 16px;
+}
+
+/* Tarjetas de productos */
+
+.producto-tipo {
+  font-size: 14px;
+}
+
+.producto-info h3 {
+  font-size: 27px;
+}
+
+.producto-info p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.producto-disponible {
+  font-size: 15px;
+}
+
+.producto-etiqueta {
+  font-size: 16px;
+}
+
+.btn-agregar,
+.btn-detalles {
+  font-size: 19px;
+}
+
+.sin-resultados {
+  font-size: 18px;
+}
+
+/* Detalles del producto */
+
+.detalle-ruta,
+.detalle-volver {
+  font-size: 16px;
+}
+
+.detalle-descripcion {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.detalle-estado,
+.detalle-aviso {
+  font-size: 16px;
+}
+
+.detalle-caracteristicas li {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.detalle-boton {
+  font-size: 21px;
+}
+
+/* Nosotros y contacto */
+
+.nosotros p,
+.contacto p,
+.nosotros-texto p,
+.contacto-titulo p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contacto-dato strong {
+  font-size: 18px;
+}
+
+.contacto-dato p {
+  font-size: 16px;
+}
+
+.contacto-aclaracion,
+.contacto-estado {
+  font-size: 15px;
+}
+
+.contacto-form h3 {
+  font-size: 32px;
+}
+
+.contacto-form label,
+.auth-card label {
+  font-size: 17px;
+}
+
+.contacto-form input,
+.contacto-form textarea,
+.auth-card input {
+  font-size: 17px;
+}
+
+/* Inicio de sesión y registro */
+
+.auth-card h1 {
+  font-size: 46px;
+}
+
+.auth-card > p,
+.auth-card form + p {
+  font-size: 17px;
+}
+
+.auth-card small {
+  font-size: 15px;
+}
+
+.auth-error {
+  font-size: 16px;
+}
+
+/* Carrito */
+
+.carrito-vacio {
+  font-size: 17px;
+}
+
+.item-carrito h3 {
+  font-size: 21px;
+}
+
+.item-carrito p {
+  font-size: 16px;
+}
+
+.item-controles .quitar-producto {
+  font-size: 16px;
+}
+
+.carrito-resumen p {
+  font-size: 16px;
+}
+
+/* Footer */
+
+.footer-agpr-grid h3 {
+  font-size: 25px;
+}
+
+.footer-agpr-grid a,
+.footer-agpr-grid p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.footer-agpr-grid small {
+  font-size: 14px;
+}
+
+.footer-agpr-base {
+  font-size: 15px;
+}
+
+/* Botones generales */
+
+.btn-principal {
+  font-size: 20px;
+}
+
+/* Ajustes para pantallas pequeñas */
+
+@media (max-width: 850px) {
+  .menu a {
+    font-size: 17px;
+  }
+
+  .footer-agpr-grid {
+    gap: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  .categoria p,
+  .beneficios p,
+  .producto-info p {
+    font-size: 16px;
+  }
+
+  .producto-info h3 {
+    font-size: 25px;
+  }
+
+  .catalogo.catalogo-refinado .filtro {
+    font-size: 17px;
+  }
+
+  .catalogo.catalogo-refinado
+  .catalogo-refinado-titulo p {
+    font-size: 17px;
+  }
+
+  .nosotros-texto p,
+  .contacto-titulo p {
+    font-size: 17px;
+  }
+
+  .footer-agpr-grid a,
+  .footer-agpr-grid p {
+    font-size: 15px;
+  }
+
+  .footer-agpr-base {
+    font-size: 14px;
+  }
+}
